@@ -1,0 +1,39 @@
+{
+  "id": "e6232c2f-56a0-4cd9-8a34-cb0b6e2b10f6",
+  "name": "Nidec-Layout",
+  "publisher": "incadea Korea",
+  "version": "1.0.0.0",
+  "brief": "Nidec 을 위한 Layout 맞춤Extension",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "2d2e2351-cce4-4547-b752-41e5a009ff2d",
+      "publisher": "Naviwolrd VietNam",
+      "name": "Copal Extension",
+      "version": "23.0.240809.2"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.0",
+  "idRanges": [
+    {
+      "from": 58000,
+      "to": 58999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "12.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
