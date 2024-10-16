@@ -193,9 +193,9 @@ pageextension 58003 PurchaseListCustom extends "Purchase Order List"
                         TempExcelBuffer.AddColumn(Remarks, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                         TempExcelBuffer.AddColumn(PurchaseLine."No.", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                         TempExcelBuffer.AddColumn(PurchaseLine.Description, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                        TempExcelBuffer.AddColumn(PurchaseLine.Quantity, false, '', false, false, false, '#,##0', TempExcelBuffer."Cell Type"::Number);
-                        TempExcelBuffer.AddColumn(Format(PurchaseLine."Direct Unit Cost", 2, '<Precision,2:2><Standard Format,2>'), false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
-                        TempExcelBuffer.AddColumn(PurchaseLine."Line Amount", false, '', false, false, false, '#,##0', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(PurchaseLine.Quantity, false, '', false, false, false, '#,##0.###', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(PurchaseLine."Direct Unit Cost", false, '', false, false, false, '#,##0.###', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(PurchaseLine."Line Amount", false, '', false, false, false, '#,##0.###', TempExcelBuffer."Cell Type"::Number);
                         TempExcelBuffer.AddColumn(Format(PurchaseLine."Order Date", 0, '<Year4>.<Month,2>.<Day,2>'), false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                     until PurchaseLine.Next() = 0;
             until PurchaseHeader.Next() = 0;
@@ -227,7 +227,6 @@ pageextension 58003 PurchaseListCustom extends "Purchase Order List"
         LineNo: Integer;
         Remarks: Text[250];
         PurchaseHeader: Record "Purchase Header";
-        VendorName: Text[50];
         Customer: Record Customer;
         tmpPONo: Code[10];
         PurchaseLine: Record "Purchase Line";
