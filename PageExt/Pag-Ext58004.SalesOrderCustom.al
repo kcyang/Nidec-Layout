@@ -137,6 +137,16 @@ pageextension 58004 SalesOrderCustom extends "Sales Order"
             Visible = false;
             Enabled = false;
         }
+        modify(PostAndNew)
+        {
+            Visible = false;
+            Enabled = false;
+        }
+        modify(PostAndSend)
+        {
+            Visible = false;
+            Enabled = false;
+        }
     }
     trigger OnOpenPage()
     begin
