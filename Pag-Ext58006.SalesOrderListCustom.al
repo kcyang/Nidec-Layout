@@ -8,9 +8,14 @@ pageextension 58006 SalesOrderListCustom extends "Sales Order List"
         }
         modify("No.")
         {
-# TODO 번호를 클릭 했을 때 페이지가 뜨도록.
             trigger OnDrillDown()
+            var
+                SH: Record "Sales Header";
+                SalesOrder: Page "Sales Order";
             begin
+                SH := Rec;
+                SalesOrder.SetRecord(SH);
+                SalesOrder.Run();
             end;
         }
         movebefore("No."; "Posting Date")
