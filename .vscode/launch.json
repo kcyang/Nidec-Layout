@@ -10,7 +10,7 @@
             "serverInstance": "BC230",
             "authentication": "UserPassword",
             "breakOnError": "All",
-            "startupObjectId": 7339,
+            "startupObjectId": 7340,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
